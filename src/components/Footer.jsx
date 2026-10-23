@@ -177,7 +177,7 @@ export default function Footer() {
                                 ['About us', '/about'],
                                 ['Our services', '/services'],
                                 ['Contact', '/contact'],
-                                ['Track a booking', '/track'],
+                                
                             ].map(([label, path]) => (
                                 <Link
                                     key={path}

@@ -18,36 +18,31 @@ import { Button, SectionTitle, Reveal } from '../components/UI'
 import ServiceCard from '../components/ServiceCard'
 import { useApp } from '../context/AppContext'
 
+
 const heroImages = [
     {
         title: 'Wedding Celebration',
-        image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=90',
+        image: '/images/tsk1.jpg',
     },
     {
         title: 'Engagement Ceremony',
-        image: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=2000&q=90',
+        image: '/images/tsk2.jpg',
     },
     {
         title: 'Birthday Parties',
-        image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=2000&q=90',
+        image: '/images/tsk3.jpg',
     },
     {
         title: 'Corporate Events',
-        image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=2000&q=90',
+        image: '/images/tsk4.jpg',
     },
     {
         title: 'Reception Celebration',
-        image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=2000&q=90',
+        image: '/images/tsk5.jpg',
     },
-    {
-        title: 'Temple Functions',
-        image: 'https://images.unsplash.com/photo-1604608672516-4e3b3c5f6f5b?auto=format&fit=crop&w=2000&q=90',
-    },
-    {
-        title: 'Cultural Celebrations',
-        image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=90',
-    },
-]
+   
+];
+
 
 function TypingText() {
     const phrases = [
@@ -313,12 +308,14 @@ export default function Home() {
                     {/* Image cards */}
                     <div className="mt-7 grid grid-cols-2 gap-4 sm:mt-10 sm:grid-cols-2 sm:gap-5 lg:mt-12 lg:grid-cols-4">
                         {experiences.map((item, index) => {
-                            const cardImages = [
-                                'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85',
-                                'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=85',
-                                'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=85',
-                                'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=85',
-                            ];
+                            
+const cardImages = [
+  '/images/wedding.jpg',
+  '/images/live-show.jpg',
+  '/images/birthday.jpg',
+  '/images/corporate.jpg',
+];
+
 
                             return (
                                 <Reveal key={item.title}>
@@ -382,6 +379,7 @@ export default function Home() {
             
 
             {/* Services */}
+
             <section className="bg-[#fff1e5] py-7 sm:py-10 lg:py-12">
                 <div className="container-wide">
                     <SectionTitle
@@ -390,9 +388,13 @@ export default function Home() {
                         description="Explore a few of our favourite ways to bring people together. Your idea can be the next one."
                     />
 
-                    <div className="mt-4 grid-cols-2 grid gap-3 sm:mt-6 sm:grid-cols-2 sm:gap-4 lg:mt-7 lg:grid-cols-3 lg:gap-5">
-                        {services.slice(0, 6).map((s, i) => (
-                            <ServiceCard key={s.id} service={s} index={i} />
+                    <div className="mt-4 grid grid-cols-2 gap-3 sm:mt-6 sm:gap-4 lg:mt-7 lg:grid-cols-3 lg:gap-5">
+                        {services.slice(0, 6).map((service, index) => (
+                            <ServiceCard
+                                key={service.id}
+                                service={service}
+                                index={index}
+                            />
                         ))}
                     </div>
 
@@ -403,6 +405,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
 
             {/* Call to Action */}
             <section className="container-wide py-7 sm:py-10 lg:py-12">

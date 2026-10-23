@@ -10,7 +10,6 @@ import {
   Home,
   Info,
   Phone,
-  ClipboardList,
   LogIn,
   UserPlus,
   ChevronRight,
@@ -24,7 +23,6 @@ const links = [
   { label: 'About', path: '/about', icon: Info },
   { label: 'Services', path: '/services', icon: Sparkles },
   { label: 'Contact', path: '/contact', icon: Phone },
-  { label: 'Track booking', path: '/track', icon: ClipboardList },
 ]
 
 const eventSlides = [
@@ -104,8 +102,8 @@ function EventCategorySlideshow() {
                 key={slideIndex}
                 aria-hidden={activeSlide !== slideIndex}
                 className={`absolute inset-0 flex items-center justify-center gap-2 transition-all duration-500 sm:gap-3 lg:gap-2 xl:gap-3 ${activeSlide === slideIndex
-                    ? 'translate-y-0 opacity-100'
-                    : 'translate-y-3 opacity-0'
+                  ? 'translate-y-0 opacity-100'
+                  : 'translate-y-3 opacity-0'
                   }`}
               >
                 {slide.map(({ label, icon: Icon }) => (
@@ -142,8 +140,8 @@ function EventCategorySlideshow() {
             <span
               key={index}
               className={`h-[2px] rounded-full transition-all duration-500 ${activeSlide === index
-                  ? 'w-4 bg-gradient-to-r from-yellow-400 via-orange-500 to-[#e60046]'
-                  : 'w-1.5 bg-orange-100'
+                ? 'w-4 bg-gradient-to-r from-yellow-400 via-orange-500 to-[#e60046]'
+                : 'w-1.5 bg-orange-100'
                 }`}
             />
           ))}
@@ -387,8 +385,8 @@ export default function Navbar() {
                 aria-controls="tsk-navigation-drawer"
                 onClick={() => setOpen((value) => !value)}
                 className={`ml-1 hidden h-11 w-11 shrink-0 items-center justify-center rounded-2xl border transition-all duration-300 lg:flex ${open
-                    ? 'border-orange-300 bg-orange-50 text-[#d82932] shadow-inner'
-                    : 'border-orange-100 bg-white text-gray-800 shadow-sm hover:-translate-y-0.5 hover:border-orange-300 hover:text-[#d82932] hover:shadow-md'
+                  ? 'border-orange-300 bg-orange-50 text-[#d82932] shadow-inner'
+                  : 'border-orange-100 bg-white text-gray-800 shadow-sm hover:-translate-y-0.5 hover:border-orange-300 hover:text-[#d82932] hover:shadow-md'
                   }`}
               >
                 {open ? <X size={22} /> : <Menu size={23} />}
@@ -415,8 +413,8 @@ export default function Navbar() {
         onClick={closeMenu}
         tabIndex={open ? 0 : -1}
         className={`fixed inset-0 z-[60] cursor-default bg-gray-950/40 backdrop-blur-[3px] transition-opacity duration-300 ${open
-            ? 'pointer-events-auto opacity-100'
-            : 'pointer-events-none opacity-0'
+          ? 'pointer-events-auto opacity-100'
+          : 'pointer-events-none opacity-0'
           }`}
       />
 
@@ -509,8 +507,8 @@ export default function Navbar() {
                   <>
                     <span
                       className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl transition ${isActive
-                          ? 'bg-white text-[#e3344c] shadow-sm'
-                          : 'bg-gray-100/80 text-gray-500 group-hover:bg-orange-50 group-hover:text-orange-600'
+                        ? 'bg-white text-[#e3344c] shadow-sm'
+                        : 'bg-gray-100/80 text-gray-500 group-hover:bg-orange-50 group-hover:text-orange-600'
                         }`}
                     >
                       <Icon size={17} />
@@ -610,15 +608,14 @@ export default function Navbar() {
         aria-label="Mobile app navigation"
         aria-hidden={!showBottomNav || footerVisible}
         className={`fixed inset-x-0 bottom-0 z-[55] border-t border-orange-100 bg-white/95 px-2 pb-[max(4px,env(safe-area-inset-bottom))] pt-1 shadow-[0_-6px_20px_rgba(70,30,20,0.07)] backdrop-blur-xl transition-all duration-300 lg:hidden ${showBottomNav && !footerVisible
-            ? 'translate-y-0 opacity-100'
-            : 'pointer-events-none translate-y-full opacity-0'
+          ? 'translate-y-0 opacity-100'
+          : 'pointer-events-none translate-y-full opacity-0'
           }`}
       >
-        <div className="mx-auto grid max-w-lg grid-cols-4 gap-1">
+        <div className="mx-auto grid max-w-lg grid-cols-3 gap-1">
           {[
             { label: 'Home', path: '/', icon: Home },
             { label: 'Services', path: '/services', icon: Sparkles },
-            { label: 'Track', path: '/track', icon: ClipboardList },
           ].map(({ label, path, icon: Icon }) => (
             <NavLink
               key={path}
@@ -635,8 +632,8 @@ export default function Navbar() {
                 <>
                   <span
                     className={`flex h-7 w-10 items-center justify-center rounded-lg transition ${isActive
-                        ? 'bg-gradient-to-r from-yellow-100 to-orange-100'
-                        : ''
+                      ? 'bg-gradient-to-r from-yellow-100 to-orange-100'
+                      : ''
                       }`}
                   >
                     <Icon size={17} />
