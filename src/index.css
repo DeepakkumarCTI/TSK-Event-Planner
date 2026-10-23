@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================================
+   Global Reset
+================================ */
+
+:root {
+    font-family: 'DM Sans', sans-serif;
+    color: #211a22;
+    background: #fffaf6;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+}
+
+#root {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+::selection {
+    background: #ffb52e;
+    color: #211a22;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+input,
+textarea,
+select {
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ================================
+   Main Layout
+================================ */
+
+main {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+main>section:first-child {
+    margin-top: 0;
+}
+
+/* ================================
+   Container
+================================ */
+
+.container-wide {
+    width: calc(100% - 24px);
+    max-width: 1500px;
+    margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+    .container-wide {
+        width: calc(100% - 40px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-wide {
+        width: calc(100% - 48px);
+    }
+}
+
+@media (min-width: 1536px) {
+    .container-wide {
+        width: calc(100% - 64px);
+    }
+}
+
+/* ================================
+   Gradient Text
+================================ */
+
+.gradient-text {
+    background: linear-gradient(100deg,
+            #ffbd32 0%,
+            #ff7a24 42%,
+            #e91e4f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* ================================
+   Gradient Background
+================================ */
+
+.gradient-bg {
+    background: linear-gradient(110deg,
+            #ffb52e 0%,
+            #ff7b27 42%,
+            #e91e4f 100%);
+}
+
+/* ================================
+   Hero Overlay
+================================ */
+
+.hero-overlay {
+    background: linear-gradient(90deg,
+            rgba(19, 12, 23, 0.88) 0%,
+            rgba(25, 12, 24, 0.67) 54%,
+            rgba(25, 12, 24, 0.2) 100%);
+}
+
+/* ================================
+   Glass Effect
+================================ */
+
+.glass {
+    background: rgba(255, 255, 255, 0.11);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+/* ================================
+   Scrollbar
+================================ */
+
+body {
+    overflow-x: hidden;
+}
+
+/* ================================
+   Responsive Adjustments
+================================ */
+
+@media (max-width: 639px) {
+    .container-wide {
+        width: calc(100% - 24px);
+    }
+}
+
+/* ================================
+   Reduced Motion Accessibility
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
