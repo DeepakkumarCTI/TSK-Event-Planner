@@ -1,0 +1,1 @@
+Replace this note with your own MP4 named hero.mp4. The home page video element is already configured for /videos/hero.mp4. Until then, the poster image displays.

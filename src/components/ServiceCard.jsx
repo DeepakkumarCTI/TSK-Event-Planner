@@ -12,7 +12,7 @@ export default function ServiceCard({ service, index = 0 }) {
             className="group relative h-full overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-tsk-red/30 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)] sm:rounded-2xl sm:hover:-translate-y-2 sm:hover:shadow-[0_20px_55px_rgba(0,0,0,0.10)]"
         >
             <Link
-                to="/services"
+                to={`/booking?service=${service.id}`}
                 className="flex h-full flex-col"
             >
                 {/* Image */}
